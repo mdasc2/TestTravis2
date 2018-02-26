@@ -1,0 +1,13 @@
+language: java
+sudo: false
+install: true
+addons:
+  sonarcloud:
+    organization: "mdasc2-github"
+    token:
+      secure: "df0a3da917791087c49bad1622be89ff23b17af2"
+jdk:
+  - oraclejdk8
+script:
+  - ant build
+  - sonar-scanner
